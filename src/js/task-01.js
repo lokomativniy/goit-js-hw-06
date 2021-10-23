@@ -8,6 +8,4 @@ const categoriesArr = [...allCategories]
   )
   .join('\n');
 console.log(categoriesArr);
-// console.log(categoriesArr[0],);s
-// console.log(categoriesArr[1],);
-// console.log(categoriesArr[2],);
+
