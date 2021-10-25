@@ -12,19 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
 const listEl = document.querySelector('.gallery');
-images.map(img => {
-  listEl.insertAdjacentHTML(
-    'beforeend',
-    `<li><img src = "${img.url}" alt = "${img.alt}" 
-      width = "600" height = "300" ></li >`,
-  );
-});
+const newImages = images
+  .map((img) => `<li class = "list-item">
+  <img src = "${img.url}" alt = "${img.alt}"width = "600" height = "300"</li>`)
+listEl.insertAdjacentHTML("beforeEnd", newImages)
 listEl.setAttribute(
-  'style',
-  'list-style-type:none; justify-content: space-around;',
-);
+    'style','list-style-type:none'
+  );
+
+// const listEl = document.querySelector('.gallery');
+// images.map(img => {
+//   listEl.insertAdjacentHTML(
+//     'beforeend',
+//     `<li><img src = "${img.url}" alt = "${img.alt}" 
+//       width = "600" height = "300" ></li >`,
+//   );
+// });
+// listEl.setAttribute(
+//   'style','list-style-type:none;',
+// );
+// for(let el of  images) 
+// document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}" width ="600" height = "300"></li>`);
 
 
 
