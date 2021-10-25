@@ -16,14 +16,36 @@ const images = [
 const listEl = document.querySelector('.gallery');
 images.map(img => {
   listEl.insertAdjacentHTML(
-    'beforeEnd',
+    'beforeend',
     `<li><img src = "${img.url}" alt = "${img.alt}" 
-      width = "200" height = "200" ></li >`,
+      width = "600" height = "300" ></li >`,
   );
 });
 listEl.setAttribute(
   'style',
-  'list-style-type:none; display: flex; justify-content: space-around;',
+  'list-style-type:none; justify-content: space-around;',
 );
+
+
+
+// const allImages = document.querySelector(".gallery");
+//   allImages.style.display = "flex";
+//   allImages.style.flexDirection = "column";
+//   allImages.style.listStyle = "none";
+//   allImages.setAttribute("flex-direction", "column");
+
+// const imagesListTemplate = ({url, alt}) => {
+//   return `<li><img src = ${url} alt = '${alt}' width="630" height="375"></li>`;
+// };
+// const addImg = images.map(imagesListTemplate).join('');
+// console.log(addImg);
+
+// allImages.insertAdjacentHTML("afterbegin", addImg);
+// images.forEach(el => {
+//   listEl.insertAdjacentHTML(
+//     'afterbegin',
+//     `<li><img src = "${el.url}" alt = "${el.alt}"  width = "150" height = "100" /></li>`,
+//   );
+// });
 
 

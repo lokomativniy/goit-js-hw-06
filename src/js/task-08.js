@@ -43,7 +43,7 @@ function onFormSubmit(event) {
    const formData = new FormData(event.currentTarget)
    console.log(formData);
   if ((mail && password) === '') {
-    alert('Пожалуйста заполните поле ')
+    alert('Пожалуйста заполните поле')
    };
   const user = {
     email: formElements.email.value,
